@@ -35,10 +35,7 @@ while True:
         y2 = int(row['ymax'])
         d=(row['name'])
 #        print(d)
-        cx=int(x1+x2)//2
-        cy=int(y1+y2)//2
         cv2.rectangle(frame,(x1,y1),(x2,y2),(0,255,0),2)
-        cv2.circle(frame,(cx,cy),3,(0,0,255),-1)
         cv2.putText(frame,str(d),(x1,y1),cv2.FONT_HERSHEY_COMPLEX,0.5,(255,0,0),2)    
     cv2.imshow("ROI",frame)
     if cv2.waitKey(1)&0xFF==27:
